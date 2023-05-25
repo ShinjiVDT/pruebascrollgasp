@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <title>PRUEBA 1 | GSAP</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="./index.html">Prueba1</a>
+        </div>
+    </header>
+
+    <div class="spacer">
+
+    </div>
+    <div class="viewport">
+        <div class="wrapper__rebote" id="wrapper__rebote">
+            <div class="box--rebote box--position-a"></div>
+            <div class="box--rebote box--position-b"></div>
+            <div class="box--rebote box--position-c"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+      
+
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                
+                trigger: ".wrapper__rebote",
+                scrub: 3,
+             /*    start: "top top     ",
+                end: "center center", */
+                pin: ".wrapper__rebote"
+
+            },
+        })
+        
+    
+        tl.to(".box--position-a", {
+            markers: true,
+            start: "top bottom",
+            y: 400,
+            x:0,
+            rotation: 10,
+            duration: 8,
+            ease: "bounce.out",
+          
+        });
+     
+
+        tl.to(".box--position-a", {
+            rotation: 50,
+            x: 100,
+            duration: 5,
+            delay: -5 
+        });
+        
+
+
+        tl.to(".box--position-a", {
+            x: 130,
+            rotation: 120,
+            duration: 4,
+        });
+
+        tl.to(".box--position-a", {
+            
+            x: 180,
+            y: 800,
+            rotation: 150,
+            duration: 2,
+            ease: "bounce.out",
+        });
+
+
+        tl.to(".box--position-a", {
+            
+            x: 110,
+            rotation: 0,
+            duration: 1,
+            delay: -1
+        });
+
+
+        tl.to(".box--position-a", {
+            x: 100,
+            y: 2000,
+         
+            duration: .5,
+        });
+
+
+
+        gsap.fromTo(".box", {
+            backgroundColor: gsap.getProperty(".box1", "--dark")
+        }, {
+            scrollTrigger: {
+                markers: true,
+                trigger: ".box3",
+                end: "  100% center",
+                scrub: true,
+                ease: "bounce.out",
+
+            },
+            backgroundColor: gsap.getProperty(".box1", "--light")
+
+        });
+
+
+        gsap.to(".box2", {
+            scrollTrigger: {
+                trigger: ".wrapper2",
+
+
+
+                scrub: 2,
+            },
+            opacity: 1,
+            x: 200,
+        });
+
+
+
+    </script>
+</body>
+
+</html>

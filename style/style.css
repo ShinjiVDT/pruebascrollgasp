@@ -1,0 +1,103 @@
+:root {
+    --light: rgb(168, 205, 156);
+    --dark: #d135cf8b;
+}
+
+header {
+    height: 350px;
+}
+
+.header {
+    background-color: rgb(20, 167, 220);
+    height: 50%;
+}
+
+.wrapper {
+    display: flex;
+    background-color: rgb(209, 160, 160);
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.box1 {
+    background: rgba(193, 80, 80, 0.432);
+    height: 150px;
+    width: 150px;
+    margin: 90px;
+
+}
+
+.box {
+    background-color: rgb(222, 230, 113);
+    height: 150px;
+    width: 150px;
+    margin: 90px;
+}
+
+.red {
+    background-color: red;
+}
+
+.wrapper2 {
+    background-color: rgb(227, 236, 159);
+    height: 2000px;
+}
+
+.box2 {
+    background: var(--dark);
+    height: 150px;
+    width: 150px;
+}
+
+
+
+/*----*/
+.viewport {
+    position: relative;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+
+.spacer{
+    width: 100px;
+    height: 500px;
+    background-color: burlywood;
+}
+
+.wrapper__rebote {
+    overflow: visible;
+    width: 100%;
+
+    height: 2400px;
+    background-color: rgb(125, 176, 186);
+}
+
+.box--rebote {
+    background-color: rgb(222, 230, 113);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+.box--position-a {
+    top: 0px;
+    background-color: rgb(216, 142, 195);
+	box-shadow: inset -25px -15px 40px rgba(0,0,0,.3);
+	background-image: linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    border-radius: 100px;
+}
+
+.box--position-b {
+    top: 550px;
+}
+
+.box--position-c {
+    top: 950px;
+    left: 500px;
+}
